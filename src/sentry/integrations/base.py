@@ -114,7 +114,7 @@ class IntegrationProvider(PipelineProvider):
     authentication, and what kind of configuration is stored.
 
     This is similar to Sentry's legacy 'plugin' information, except that an
-    integration is lives as an instance in the database, and the ``IntegrationProvider``
+    integration lives as an instance in the database, and the ``IntegrationProvider``
     class is just a descriptor for how that object functions, and what behavior
     it provides (such as extensions provided).
     """
@@ -151,7 +151,7 @@ class IntegrationProvider(PipelineProvider):
 
     # if the integration can be uninstalled in Sentry, set to False
     # if True, the integration must be uninstalled from the other platform
-    # which is uninstalled/disabled via wehbook
+    # which is uninstalled/disabled via webhook
     can_disable = False
 
     # if the integration has no application-style access token, associate
