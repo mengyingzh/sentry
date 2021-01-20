@@ -5,7 +5,7 @@ const width = '36px';
 const FieldControlState = styled('div')<{
   /**
    * Do not apply a width to the control state container, allowing it to flex
-   * based on it's parents constraints.
+   * based on its parents constraints.
    */
   flexibleControlStateSize?: boolean;
 }>`

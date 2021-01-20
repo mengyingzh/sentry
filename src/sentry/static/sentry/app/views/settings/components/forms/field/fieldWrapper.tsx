@@ -14,13 +14,13 @@ type Props = {
    */
   stacked?: boolean;
   /**
-   * Dsiplay the field control container in "inline" fashion. The label and
+   * Display the field control container in "inline" fashion. The label and
    * description will be aligned to the left, while the control itself will be
    * aligned to the right.
    */
   inline?: boolean;
   /**
-   * When false adds padding to the right of the elment to ensure visuall
+   * When false adds padding to the right of the element to ensure visual
    * consistency with other fields that aren't using flexible control states.
    */
   hasControlState?: boolean;
