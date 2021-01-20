@@ -66,7 +66,7 @@ type BaseProps = {
    */
   style?: React.CSSProperties;
   /**
-   * When the field is blurred should it automatically persist it's value into
+   * When the field is blurred should it automatically persist its value into
    * the model
    */
   saveOnBlur?: boolean;
