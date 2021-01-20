@@ -1,7 +1,5 @@
 from __future__ import absolute_import
 
-import six
-
 try:
     import cPickle as pickle
 except ImportError:
@@ -38,7 +36,9 @@ implements_to_string = _identity
 implements_iterator = _identity
 implements_bool = _identity
 
+
 from binascii import crc32 as _crc32
+
 
 # In python3 crc32 was changed to never return a signed value, which is
 # different from the python2 implementation. As noted in

@@ -1,9 +1,7 @@
 from __future__ import absolute_import
 
 import logging
-import sys
 import threading
-import six
 import collections
 import functools
 

@@ -1,11 +1,8 @@
 from __future__ import absolute_import
 
 import csv
-import six
 
-from django.utils.encoding import force_bytes
 from django.http import StreamingHttpResponse
-from sentry.utils.compat import map
 
 
 # csv.writer doesn't provide a non-file interface

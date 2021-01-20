@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 
-import six
 import os.path
 
 from six.moves.urllib.parse import urlencode
