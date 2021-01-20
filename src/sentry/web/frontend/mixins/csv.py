@@ -8,10 +8,6 @@ from django.http import StreamingHttpResponse
 from sentry.utils.compat import map
 
 
-def encode_row(row):
-    return row
-
-
 # csv.writer doesn't provide a non-file interface
 # https://docs.djangoproject.com/en/1.9/howto/outputting-csv/#streaming-large-csv-files
 class Echo(object):
@@ -37,7 +33,7 @@ class CsvMixin(object):
         pseudo_buffer = Echo()
         writer = csv.writer(pseudo_buffer)
         response = StreamingHttpResponse(
-            (writer.writerow(encode_row(r)) for r in row_iter()), content_type="text/csv"
+            (writer.writerow(r) for r in row_iter()), content_type="text/csv"
         )
         response["Content-Disposition"] = u'attachment; filename="{}.csv"'.format(filename)
         return response

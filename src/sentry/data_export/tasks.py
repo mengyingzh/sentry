@@ -36,7 +36,7 @@ from .base import (
     MAX_BATCH_SIZE,
 )
 from .models import ExportedData, ExportedDataBlob
-from .utils import convert_to_utf8, handle_snuba_errors
+from .utils import handle_snuba_errors
 from .processors.discover import DiscoverProcessor
 from .processors.issues_by_tag import IssuesByTagProcessor
 
@@ -105,11 +105,6 @@ def assemble_download(
 
             with tempfile.TemporaryFile(mode="w+b") as tf:
                 # XXX(python3):
-                #
-                # In python2 land we write utf-8 encoded strings as bytes via
-                # the csv writer (see convert_to_utf8). The CSV writer will
-                # ONLY write bytes, even if you give it unicode it will convert
-                # it to bytes.
                 #
                 # In python3 we write unicode strings (which is all the csv
                 # module is able to do, it will NOT write bytes like in py2).

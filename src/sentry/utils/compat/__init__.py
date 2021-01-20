@@ -55,6 +55,9 @@ from binascii import crc32 as _crc32
 #
 # We can sign the return value using the following bit math to ensure we
 # match the python2 output of crc32.
+#
+# XXX(BYK): This needs to stay as we transitioned from PY2 and still need to
+#           keep these compatible due to values stored in various places.
 def crc32(*args):
     rt = _crc32(*args)
     return rt - ((rt & 0x80000000) << 1)
